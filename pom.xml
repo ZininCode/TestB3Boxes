@@ -6,6 +6,14 @@
     <groupId>nz</groupId>
     <artifactId>TestB3Boxes</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     <name>TestB3Boxes</name>
     <description>TestB3Boxes</description>
     <properties>

@@ -5,16 +5,21 @@ import nz.Games3Boxes.Services.*;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
+import static java.lang.Math.abs;
+
 public class Game3BoxesControl {
     private final Integer NUMBER_OF_GAMES = 1000000;
     private final Integer NUMBER_OF_BOXES = 3;
     private final Integer NUMBER_OF_WIN_BOXES = 1;
 
     public void chanceOfWinIfSwitchedBox() {
-        Integer switchBoxWins = new GameControlService().runGames(NUMBER_OF_GAMES, NUMBER_OF_BOXES, NUMBER_OF_WIN_BOXES);
+        long switchedOverStayedChanceChange = new GameControlService().runGames(NUMBER_OF_GAMES, NUMBER_OF_BOXES, NUMBER_OF_WIN_BOXES);
 
-        double chance = (double) switchBoxWins / NUMBER_OF_GAMES;
-        NumberFormat formatter = new DecimalFormat("#0.00");
-        System.out.println("win chances " + formatter.format(chance));
+        if (switchedOverStayedChanceChange > 0) {
+            System.out.println("Switching boxes increases win chances by around " + switchedOverStayedChanceChange + " percents.");
+        } else {
+            System.out.println("Switching boxes decreases win chances by around " + abs(switchedOverStayedChanceChange) + " percents.");
+        }
     }
 }
+
