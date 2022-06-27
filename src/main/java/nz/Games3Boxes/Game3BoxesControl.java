@@ -10,7 +10,7 @@ public class Game3BoxesControl {
     private final Integer NUMBER_OF_BOXES = 3;
     private final Integer NUMBER_OF_WIN_BOXES = 1;
 
-    public void answerForSwitchBoxWinChance() {
+    public void chanceOfWinIfSwitchedBox() {
         Integer switchBoxWins = new GameControlService().runGames(NUMBER_OF_GAMES, NUMBER_OF_BOXES, NUMBER_OF_WIN_BOXES);
 
         double chance = (double) switchBoxWins / NUMBER_OF_GAMES;
