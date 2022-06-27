@@ -7,7 +7,6 @@ import java.util.Random;
 
 public class BoxService {
 
-
     public List<GameBox> initiateBoxes(Integer number_of_boxes, Integer number_of_win_boxes) {
 
         List<GameBox> boxes = new ArrayList<>();
@@ -37,7 +36,7 @@ public class BoxService {
         return null;
     }
 
-    public Boolean getContentInSwitchedBox(Boolean money) {
+    public Boolean getWinResultIfSwitchedBox(Boolean money) {
         if (money){
             return false;
         }

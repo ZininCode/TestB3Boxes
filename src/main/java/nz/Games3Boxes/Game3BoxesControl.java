@@ -1,14 +1,10 @@
 package nz.Games3Boxes;
 
 import nz.Games3Boxes.Services.*;
-
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-
 import static java.lang.Math.abs;
 
 public class Game3BoxesControl {
-    private final Integer NUMBER_OF_GAMES = 1000000;
+    private final long NUMBER_OF_GAMES = 1000000;
     private final Integer NUMBER_OF_BOXES = 3;
     private final Integer NUMBER_OF_WIN_BOXES = 1;
 
